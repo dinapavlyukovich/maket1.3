@@ -1,0 +1,362 @@
+@font-face {
+    font-family: "TTLakes Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: local("TTLakes Regular"),
+         local("TTLakes-Regular"),  
+         url("fonts/TTLakes-Regular.woff") format("woff"),
+         url("fonts/TTLakes-Regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "TTLakes Medium";
+    font-style: normal;
+    font-weight: 400;
+    src: local("TTLakes Medium"),
+         local("TTLakes-Medium"),  
+         url("fonts/TTLakes-Medium.woff") format("woff"),
+         url("fonts/TTLakes-Regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "TTLakes Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: local("TTLakes Bold"),
+         local("TTLakes-Bold"),  
+         url("fonts/TTLakes-Bold.woff") format("woff"),
+         url("fonts/TTLakes-Bold.ttf") format("ttf");
+}
+
+
+* {
+    margin: 0;
+    font-family: "TTLakes Regular";
+    background-color: #F8F8F8;
+}
+
+html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.container {
+background: #F8F8F8;
+}
+
+.header {
+    background: #FFFFFF;
+    display: none;
+}
+
+.header__inner {
+    display: flex;
+    padding: 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__btn {
+    margin-right: 16px;
+    position: relative;
+}
+
+li:last-of-type .header__btn {
+    margin-right: 0;
+}
+
+.header__logo {
+    display: flex;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header__menu::before {
+    content: url("imgs/divider.svg");
+    bottom: 5px;
+    left: 60px;
+    position: absolute;
+}
+
+.header__menu .header__btn {
+    margin-right: 20px;
+}
+
+.header__logo {
+    display: flex;
+    margin-left: 20px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header__nav::after {
+    position: absolute;
+    content: url("imgs/divider.svg");
+    right: 115px;
+    top: 5px;
+  
+}
+
+.header__nav .hidden:nth-child(3) {
+    margin-right: 26px;
+}
+
+.intro {
+    padding: 42px 28px 11px 34px;
+}
+
+.intro__title::before {
+    content: url("imgs/highlight.svg");
+    position: absolute;
+    left: 0;
+}
+
+.intro__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.intro__title {
+    font-family: "TTLakes Bold";
+    font-size: 28px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #FF3E79;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.intro__text-btn {
+    font-family:"TTLakes Medium";
+}
+
+.intro__text-btn .btn {
+    margin-left: 8px;
+}
+
+.intro .intro__btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro__btn label span {
+    display: flex;
+    align-items: center;
+}
+
+.intro__text-btn:first-child {
+    margin-left: 32px;
+}
+
+.intro__nav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    
+}
+
+.intro__link {
+    font-family: "TTLakes Medium";
+    font-size: 16px;
+    color: #7E7E82;
+}
+
+.intro__list-elem {
+    color: #7E7E82;
+    padding: 8px 21px 7px 22px;
+    margin-bottom: 57px;
+    white-space: nowrap;
+    border: 2px solid #F8F8F8;
+    background: #F8F8F8;
+}
+
+.intro__list-elem:hover {
+    padding: 8px 21px 7px 22px;
+    background-color: white;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+
+
+.intro__list-elem:last-child {
+    position: absolute;
+    top: 40px;
+}
+
+.intro__list-elem:nth-child(5) {
+    padding: 8px 8px 7px 22px;
+}
+
+.intro__main {
+    display: flex;
+    width: 100%;
+}
+
+
+
+.intro__text {
+    flex-grow: 1;  
+    padding-right: 36px;
+    font-weight: normal;
+}
+
+.intro__text .text {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.intro__img {
+    flex-grow: 1;
+    border-radius: 8px;
+}
+
+.intro__read-more {
+    display: flex;
+    margin-top: 13px;
+    font-family:"TTLakes Medium";
+    font-size: 16px; 
+    line-height: 24px; 
+    color: #1B1C21;
+    cursor: pointer;
+}
+
+.intro__read-more::before {
+    content: url("imgs/expand.svg");
+    margin-right: 8px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1120px) {
+    .intro__nav {
+        overflow-x: scroll;
+    }
+    
+    .intro__nav::-webkit-scrollbar {
+			display: none;
+		}
+    
+
+    .intro__list-elem {
+        margin-bottom: 32px;
+    }
+
+    .intro__list-elem:nth-child(5) {
+        padding: 8px 21px 7px 22px;
+    }
+
+    .intro__list-elem:last-child {
+        position: static;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .intro__header {
+        width: 100%;
+    }
+
+    .intro__text p:nth-child(4) {
+        display: none;
+    }
+
+    .intro__title::before {
+        left: 0;
+
+    }
+
+    .intro__btn .hidden {
+        display: none;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        .header__logo {
+            margin: 0;
+            padding-right: 38px;
+        }
+    
+        .header {
+            display: block;
+        }
+    
+    
+        .intro__main {
+            width: 100%;
+            flex-direction: column;
+        }
+    
+        .header__menu::before {
+            display: none;
+        }
+    
+        .intro__text p:nth-child(4) {
+            display: none;
+        }
+    
+        .intro__text p:nth-child(3) {
+            display: none;
+        }
+    
+        .header__nav .hidden:nth-child(-n+3) {
+            display: none;
+        }
+    
+        .intro {
+            padding: 0;
+        }
+    
+        .intro__text {
+            padding: 0 16px 0 16px;
+        }
+    
+        .intro__nav {
+            padding-left: 16px;
+        }
+    
+        .intro__title {
+            padding-left: 12px;
+        }
+    
+        h1 {
+            padding: 24px 0 0 0;
+        }
+    
+        .header__logo::before {
+            display: none;
+        }
+    }
+    
+
+}
+

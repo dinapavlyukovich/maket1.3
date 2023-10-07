@@ -32,7 +32,7 @@
 * {
     margin: 0;
     font-family: "TTLakes Regular";
-    background-color: #F8F8F8;
+    
 }
 
 html {
@@ -61,7 +61,7 @@ background: #F8F8F8;
 }
 
 .header {
-    background: #FFFFFF;
+    background: white;
     display: none;
 }
 
@@ -70,11 +70,13 @@ background: #F8F8F8;
     padding: 24px;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .header__btn {
     margin-right: 16px;
     position: relative;
+    
 }
 
 li:last-of-type .header__btn {
@@ -83,12 +85,14 @@ li:last-of-type .header__btn {
 
 .header__logo {
     display: flex;
+    
 }
 
 .header__menu {
     display: flex;
     align-items: center;
     position: relative;
+    
 }
 
 .header__menu::before {
@@ -209,6 +213,12 @@ li:last-of-type .header__btn {
     border-radius: 6px;
 }
 
+.intro__list-elem--active {
+    padding: 8px 21px 7px 22px;
+    background-color: white;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
 
 .intro__list-elem:last-child {
     position: absolute;
@@ -227,7 +237,8 @@ li:last-of-type .header__btn {
 
 
 .intro__text {
-    flex-grow: 1;  
+    flex-grow: 1;
+    flex-basis: 40px;   
     padding-right: 36px;
     font-weight: normal;
 }
@@ -239,6 +250,7 @@ li:last-of-type .header__btn {
 
 .intro__img {
     flex-grow: 1;
+    flex-basis: 20px;
     border-radius: 8px;
 }
 
@@ -281,6 +293,7 @@ li:last-of-type .header__btn {
 
     .header {
         display: block;
+        background-color: white;
     }
 
     .intro__header {
@@ -300,6 +313,9 @@ li:last-of-type .header__btn {
         display: none;
     }
 
+  
+
+
     @media screen and (min-width: 320px) and (max-width: 767px) {
         .header__logo {
             margin: 0;
@@ -309,7 +325,6 @@ li:last-of-type .header__btn {
         .header {
             display: block;
         }
-    
     
         .intro__main {
             width: 100%;
@@ -357,6 +372,14 @@ li:last-of-type .header__btn {
         }
     }
     
+  @media screen and (min-width: 768px) and (max-width: 1119px) {
+        .intro__text {
+         width: 50%;
+        }
 
+        .intro__img {
+         width: 50%;
+        }
+    }
 }
 

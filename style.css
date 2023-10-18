@@ -32,7 +32,6 @@
 * {
     margin: 0;
     font-family: "TTLakes Regular";
-    
 }
 
 html {
@@ -42,19 +41,6 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
-
-ul {
-    padding: 0;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-
-}
 
 .container {
 background: #F8F8F8;
@@ -70,29 +56,21 @@ background: #F8F8F8;
     padding: 24px;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .header__btn {
     margin-right: 16px;
-    position: relative;
-    
+    position: relative; 
 }
 
 li:last-of-type .header__btn {
     margin-right: 0;
 }
 
-.header__logo {
-    display: flex;
-    
-}
-
 .header__menu {
     display: flex;
     align-items: center;
     position: relative;
-    
 }
 
 .header__menu::before {
@@ -122,7 +100,6 @@ li:last-of-type .header__btn {
     content: url("imgs/divider.svg");
     right: 115px;
     top: 5px;
-  
 }
 
 .header__nav .hidden:nth-child(3) {
@@ -145,7 +122,7 @@ li:last-of-type .header__btn {
     margin-bottom: 8px;
 }
 
-.intro__title {
+.title {
     font-family: "TTLakes Bold";
     font-size: 28px;
 }
@@ -162,42 +139,51 @@ li:last-of-type .header__btn {
     cursor: pointer;
 }
 
-.intro__text-btn {
-    font-family:"TTLakes Medium";
-}
-
-.intro__text-btn .btn {
-    margin-left: 8px;
-}
-
-.intro .intro__btn {
+.intro__header-btn {
     display: flex;
-    justify-content: flex-end;
 }
 
-.intro__btn label span {
-    display: flex;
-    align-items: center;
+.intro__btn:first-child {
+margin-left: 155px;
 }
 
-.intro__text-btn:first-child {
-    margin-left: 32px;
-}
-
-.intro__nav {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
+.intro__btn--repair::before {
+    content: "Оставить заявку";
+    font-family: "TTLakes Medium";
+    font-size: 16px;
+    text-wrap: nowrap;
+    position: absolute;
+    right: 270px; 
     
 }
 
-.intro__link {
+.intro__btn--checkstatus::before {
+    content: "Статус ремонта";
     font-family: "TTLakes Medium";
+    font-size: 16px;
+    text-wrap: nowrap;
+    position: absolute;
+    right: 74px; 
+    
+}
+
+.nav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 0;
+    
+}
+
+.nav__link {
+    font-family: "TTLakes Medium";
+    text-decoration: none;
     font-size: 16px;
     color: #7E7E82;
 }
 
-.intro__list-elem {
+.nav__list-elem {
+    list-style: none;
     color: #7E7E82;
     padding: 8px 21px 7px 22px;
     margin-bottom: 57px;
@@ -206,26 +192,26 @@ li:last-of-type .header__btn {
     background: #F8F8F8;
 }
 
-.intro__list-elem:hover {
+.nav__list-elem:hover {
     padding: 8px 21px 7px 22px;
     background-color: white;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
 }
 
-.intro__list-elem--active {
+.nav__list-elem--active {
     padding: 8px 21px 7px 22px;
     background-color: white;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
 }
 
-.intro__list-elem:last-child {
+.nav__list-elem:last-child {
     position: absolute;
     top: 40px;
 }
 
-.intro__list-elem:nth-child(5) {
+.nav__list-elem:nth-child(5) {
     padding: 8px 8px 7px 22px;
 }
 
@@ -270,24 +256,24 @@ li:last-of-type .header__btn {
 }
 
 @media screen and (min-width: 320px) and (max-width: 1120px) {
-    .intro__nav {
+    .nav {
         overflow-x: scroll;
     }
     
-    .intro__nav::-webkit-scrollbar {
+    .nav::-webkit-scrollbar {
 			display: none;
 		}
     
 
-    .intro__list-elem {
+    .nav__list-elem {
         margin-bottom: 32px;
     }
 
-    .intro__list-elem:nth-child(5) {
+    .nav__list-elem:nth-child(5) {
         padding: 8px 21px 7px 22px;
     }
 
-    .intro__list-elem:last-child {
+    .nav__list-elem:last-child {
         position: static;
     }
 
@@ -309,7 +295,11 @@ li:last-of-type .header__btn {
 
     }
 
-    .intro__btn .hidden {
+    .hidden {
+        list-style: none;
+    }
+
+    .intro__header-btn .hidden {
         display: none;
     }
 
@@ -360,11 +350,7 @@ li:last-of-type .header__btn {
         }
     
         .intro__title {
-            padding-left: 12px;
-        }
-    
-        h1 {
-            padding: 24px 0 0 0;
+            padding: 24px 0 0 12px;
         }
     
         .header__logo::before {
@@ -382,4 +368,127 @@ li:last-of-type .header__btn {
         }
     }
 }
+
+
+.burger {
+    width:320px;
+    background: #FFF;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), 
+                -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+
+}
+
+.header-burger__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px 46px 24px;
+}
+
+.header-burger__menu {
+    display: flex;
+    align-items: center;
+
+}
+
+.btn:hover {
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.header-burger__btn-exit {
+   margin-right: 16px;
+}
+
+.main-burger {
+   padding-left: 24px;
+}
+
+.main-burger__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 32px;
+    list-style: none;
+}
+
+.main-burger__link {
+   position: relative;
+   font-family: "TTLakes Medium";
+   font-size: 16px;
+   line-height: 24px;
+   text-decoration: none;
+   color: #1B1C21;
+}
+
+.main-burger__link--active::before {
+     content: url("imgs/highlight.svg");
+     position: absolute;
+     left: -23px;
+     top:-6px;
+}
+
+.main-burger__link:hover {
+    color:rgba(126, 126, 130, 1);
+    transform: scale(1.1) translateX(15px);
+}
+
+.main-burger__link--active{
+    color: rgba(126, 126, 130, 1);
+}
+
+.main-burger__link:first-child:hover {
+    color:rgba(126, 126, 130, 1);
+    transform: none;
+}
+
+.footer-burger {
+    padding: 268px 0 32px 24px;
+}
+
+.footer-burger__nav {
+    display: flex;
+    gap:16px;
+    padding-bottom: 16px;
+}
+
+.adress {
+    font-family: "TTLakes Medium";
+}
+
+.phone-number {
+    display: block;
+    font-family: "TTLakes Bold";
+    font-size: 24px;
+}
+
+.footer-burger__phone-number {
+    padding: 12px 0 40px 0;
+}
+
+.footer-burger__change-language {
+    display: flex;
+    gap:6px;
+}
+
+.btn-lang {
+all: unset;
+cursor: pointer;
+font-family: "TTLakes Medium";
+}
+
+.btn-lang:first-child {
+    color:#7E7E82;
+}
+
+.btn-lang:hover {
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.btn-lang--active:hover {
+    opacity: unset;
+}
+
 

@@ -9,45 +9,47 @@
 </head>
 <body>
 
-    <aside class="burger">
+    <aside class="container-menu">
         
-     <header class="header-burger">
-       <div class="header-burger__inner">
-         <div class="header-burger__menu">
-            <button class="btn header-burger__btn-exit"><img src="imgs/close.svg" alt="Закрыть"></button>
+     <header class="header-menu">
+         <div class="header-menu__inner">
+            <button class="btn header-menu__btn"><img src="imgs/close.svg" alt="Закрыть"></button>
             <a href="#"><img src="imgs/Group.svg" alt="Логотип компании"></a>
          </div>
          <button class="btn"><img src="imgs/search.svg" alt="Поиск"></button>
-       </div>
       </header>
 
-     <div class="main-burger">
-        <nav class="main-burger__nav">
-          <ul class="main-burger__list">
-            <li><a class="main-burger__link main-burger__link--active" href="#">Ремонт техники</a></li>
-            <li><a class="main-burger__link" href="#">Услуги и сервисы</a></li>
-            <li><a class="main-burger__link" href="#">Корпоративным клиентам</a></li>
-            <li><a class="main-burger__link" href="#">Продавцам техники</a></li>
-            <li><a class="main-burger__link" href="#">Партнерам</a></li>
-            <li><a class="main-burger__link" href="#">Производителям</a></li>
-            <li><a class="main-burger__link" href="#">Наши сервисные центры</a></li>
-            <li><a class="main-burger__link" href="#">Контакты</a></li>
+     <div class="main-menu">
+        <nav class="main-menu__nav">
+          <ul class="menu-list">
+            <li><a class="menu-list__link menu-list__link--active" href="#">Ремонт техники</a></li>
+            <li><a class="menu-list__link" href="#">Услуги и сервисы</a></li>
+            <li><a class="menu-list__link" href="#">Корпоративным клиентам</a></li>
+            <li><a class="menu-list__link" href="#">Продавцам техники</a></li>
+            <li><a class="menu-list__link" href="#">Партнерам</a></li>
+            <li><a class="menu-list__link" href="#">Производителям</a></li>
+            <li><a class="menu-list__link" href="#">Наши сервисные центры</a></li>
+            <li><a class="menu-list__link" href="#">Контакты</a></li>
           </ul>
         </nav>
      </div>
 
-     <footer class="footer-burger">
-        <div class="footer-burger__nav">
-            <button class="btn footer-burger__btn"><img src="imgs/call.svg" alt="Звонок"></button>
-            <button class="btn footer-burger__btn"><img src="imgs/chat.svg" alt="Чат"></button>
-            <button class="btn footer-burger__btn"><img src="imgs/checkstatus.svg" alt="Профиль"></button>
+     <footer class="footer-menu">
+        <div class="footer-menu__nav">
+            <button class="btn footer-menu__btn"><img src="imgs/call.svg" alt="Звонок"></button>
+            <button class="btn footer-menu__btn"><img src="imgs/chat.svg" alt="Чат"></button>
+            <button class="btn footer-menu__btn"><img src="imgs/checkstatus.svg" alt="Профиль"></button>
         </div>
-        <adress class="adress">mail@cps.com</adress>
-        <pre><span class="phone-number footer-burger__phone-number">8 800 890 8900</span></pre>
-        <div class="change-language footer-burger__change-language">
-            <button class="btn-lang btn-lang--active">RU</button>
-            <button class="btn-lang">EN</button>
-            <button class="btn-lang">CH</button>
+
+        <address class="contacts">
+          <a class="contacts__email" href="mailto:mail@cps.com">mail@cps.com</a>
+          <a class="contacts__phone" href="tel:88008908900">8 800 890 8900</a>
+        </address>
+
+        <div class="language">
+            <button class="language__btn language__btn--active">RU</button>
+            <button class="language__btn">EN</button>
+            <button class="language__btn">CH</button>
         </div>
      </footer>
 

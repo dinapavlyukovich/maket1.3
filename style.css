@@ -370,7 +370,7 @@ margin-left: 155px;
 }
 
 
-.burger {
+.container-menu {
     width:320px;
     background: #FFF;
     box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), 
@@ -378,14 +378,14 @@ margin-left: 155px;
 
 }
 
-.header-burger__inner {
+.header-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px 24px 46px 24px;
 }
 
-.header-burger__menu {
+.header-menu__inner {
     display: flex;
     align-items: center;
 
@@ -396,15 +396,15 @@ margin-left: 155px;
     opacity: 0.7;
 }
 
-.header-burger__btn-exit {
+.header-menu__btn {
    margin-right: 16px;
 }
 
-.main-burger {
+.main-menu {
    padding-left: 24px;
 }
 
-.main-burger__list {
+.menu-list {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -413,7 +413,7 @@ margin-left: 155px;
     list-style: none;
 }
 
-.main-burger__link {
+.menu-list__link {
    position: relative;
    font-family: "TTLakes Medium";
    font-size: 16px;
@@ -429,66 +429,271 @@ margin-left: 155px;
      top:-6px;
 }
 
-.main-burger__link:hover {
+.menu-list__link:hover {
     color:rgba(126, 126, 130, 1);
     transform: scale(1.1) translateX(15px);
 }
 
-.main-burger__link--active{
+.menu-list__link--active{
     color: rgba(126, 126, 130, 1);
 }
 
-.main-burger__link:first-child:hover {
+.menu-list__link:first-child:hover {
     color:rgba(126, 126, 130, 1);
     transform: none;
 }
 
-.footer-burger {
+.footer-menu {
     padding: 268px 0 32px 24px;
 }
 
-.footer-burger__nav {
+.footer-menu__nav {
     display: flex;
     gap:16px;
     padding-bottom: 16px;
 }
 
-.adress {
-    font-family: "TTLakes Medium";
+.contacts {
+    all: initial;  
 }
 
-.phone-number {
+.contacts__email {
+    font-family: "TTLakes Medium";
+    color:#1B1C21;
+    text-decoration: none;
+     
+}
+
+.contacts__phone { 
     display: block;
     font-family: "TTLakes Bold";
     font-size: 24px;
-}
-
-.footer-burger__phone-number {
     padding: 12px 0 40px 0;
+    color:#1B1C21;
+    text-decoration: none;
 }
 
-.footer-burger__change-language {
+.language {
     display: flex;
     gap:6px;
 }
 
-.btn-lang {
+.language__btn {
 all: unset;
 cursor: pointer;
 font-family: "TTLakes Medium";
 }
 
-.btn-lang:first-child {
+.language__btn:first-child {
     color:#7E7E82;
 }
 
-.btn-lang:hover {
+.language__btn:hover {
     transition: 0.3s;
     opacity: 0.7;
 }
 
-.btn-lang--active:hover {
+.language__btn--active:hover {
     opacity: unset;
 }
 
 
+.brands-header {
+    height: 80px;
+    background: linear-gradient(to right, #F8F8F8 25%, #FFFFFF);
+    border-top: 1px solid #D9FFF5;
+    display: flex;
+    align-items: center;
+}
+
+
+.brands-header__name {
+    font-family: "TTLakes Regular";
+    color:#7E7E82;
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 16px;
+    width: 288px;
+}
+    
+@media (min-width:768px) {
+    .brands-header {
+        height: 56px;
+    }
+
+    .brands-header__name {
+        margin-left: 24px;
+        width: 100%;
+    }
+}
+    
+
+.swiper {
+    height: 116px;
+    transition: height 1s ease-in-out;
+}
+
+.swiper::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 81px;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
+    right: 0;
+    top: 10px;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 116px;
+    padding: 16px;
+    
+}
+
+
+.swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 240px;
+    max-width: 240px;
+    max-height: 72px;
+    background-color:  #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    
+}
+
+.swiper-slide:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.swiper-pagination {
+    height: 8px;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    --swiper-theme-color:#B5B6BC;
+    
+}
+
+.swiper-slide__logo {
+    margin-left: 16px;
+}
+
+.swiper-slide__link {
+    display: block;
+    position: relative;
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #FF3E79;
+    background-color: transparent;
+    
+    
+}
+
+.swiper-slide__link::after {
+    content: url("imgs/dropdown.svg");
+    position: absolute;
+    left: 17px;
+    top: 10px;
+}
+
+
+.button-showmore {
+    display: none;
+}
+
+.button-hide {
+    display: none;
+}
+
+@media (min-width:768px) {
+    .swiper {
+        height: 200px;
+        overflow: hidden;
+        
+    }
+
+    .swiper-total {
+        height: 380px;
+        transition: height 1s ease-in-out;
+    }
+    
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        max-width: 770px;
+        padding: 24px;
+    }
+
+    .swiper-slide{
+        min-width: 224px;
+        max-width: 224px;
+        min-height: 72px;
+        max-height: 72px;
+        margin-bottom: 16px;
+        margin-right: 24px;
+    }
+   
+    .button-showmore {
+        display: block;
+        font-family: "TTLakes Medium";
+        border: none;
+        background-color: transparent;
+        margin-left: 32px;
+
+        font-weight: 500;
+        font-style: normal;
+        font-size: 16px;
+    }
+
+    .button-hide {
+        display: block;
+        font-family: "TTLakes Medium";
+        border: none;
+        background-color: transparent;
+        margin-left: 32px;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 16px;
+    }
+
+    .button-showmore::before {
+        content: url("imgs/expand.svg");
+        margin-right: 17px; 
+    }
+
+    .button-hide::before {
+        content: url("imgs/upexpand.svg");
+        margin-right: 17px;
+    }
+
+    .button--hidden {
+        display: none;
+    }
+}
+
+@media (min-width:1024px) {
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        max-width: 1024px;
+        padding: 24px;
+    }
+
+    .swiper-total {
+        height: 300px;
+    }
+    
+    .swiper-slide:first-child {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+}

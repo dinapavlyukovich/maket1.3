@@ -422,7 +422,7 @@ margin-left: 155px;
    color: #1B1C21;
 }
 
-.main-burger__link--active::before {
+.menu-list__link--active::before {
      content: url("imgs/highlight.svg");
      position: absolute;
      left: -23px;
